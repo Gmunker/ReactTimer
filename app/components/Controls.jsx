@@ -3,9 +3,11 @@ var React = require('react');
 var TimerControls = React.createClass({
   render: function () {
     return (
-      <div className="row">
-        <button className="button expand">Start</button>
-        <button className="button expand">Clear</button>
+      <div>
+        <div className="row">
+          <button className="button control-buttons">Start</button>
+          <button className="button control-buttons">Clear</button>
+        </div>
       </div>
     )
   }

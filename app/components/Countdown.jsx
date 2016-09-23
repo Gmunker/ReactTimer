@@ -6,9 +6,19 @@ var Countdown = React.createClass({
   render: function () {
     return (
       <div>
-        <h1>Countdown Component</h1>
-        <Clock/>
-        <CountdownForm/>
+        <div className="row">
+        <h1 className="text-center">Countdown Component</h1>
+      </div>
+      <div className="row">
+        <div className="columns large-3 large-centered">
+          <Clock/>
+        </div>
+      </div>
+      <div className="row">
+        <div className="columns large-3 large-centered">
+          <CountdownForm/>
+        </div>
+      </div>
       </div>
     )
   }

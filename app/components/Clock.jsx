@@ -5,7 +5,9 @@ var TimerClock = React.createClass({
     return (
       <div>
         <div className="row">
-          <div className="clock-background text-center"></div>
+          <div className="clock-background text-center">
+            <p id="clock-display">00:00</p>
+          </div>
         </div>
       </div>
     )

@@ -6,14 +6,19 @@ var Timer = React.createClass({
   render: function () {
     return (
       <div>
-        <h1>Timer Component</h1>
-        <div className="columns" id="timer-clock">
+        <div className="row">
+        <h1 className="text-center">Countdown Component</h1>
+      </div>
+      <div className="row">
+        <div className="columns large-3 large-centered">
           <Clock/>
         </div>
-        <div className="columns" id="timer-controls">
+      </div>
+      <div className="row">
+        <div className="columns large-3 large-centered">
           <Controls/>
         </div>
-
+      </div>
       </div>
     )
   }
