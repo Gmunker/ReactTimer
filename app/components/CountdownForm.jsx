@@ -1,6 +1,7 @@
 var React = require('react');
 
 var CountdownForm = React.createClass({
+  
   handleSubmit: function (e) {
     e.preventDefault();
     var time = this.refs.countdownInput.value;
@@ -23,3 +24,4 @@ var CountdownForm = React.createClass({
 });
 
 module.exports = CountdownForm;
+
