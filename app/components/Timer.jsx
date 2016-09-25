@@ -7,7 +7,7 @@ var Timer = React.createClass({
     return (
       <div>
         <div className="row">
-        <h1 className="text-center">Countdown Component</h1>
+        <h1 className="text-center">Timer Component</h1>
       </div>
       <div className="row">
         <div className="columns large-3 large-centered">
