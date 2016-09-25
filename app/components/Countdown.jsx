@@ -11,7 +11,7 @@ var Countdown = React.createClass({
       </div>
       <div className="row">
         <div className="columns large-3 large-centered">
-          <Clock/>
+          <Clock totalSeconds={0}/>
         </div>
       </div>
       <div className="row">
