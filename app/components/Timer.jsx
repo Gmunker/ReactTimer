@@ -7,18 +7,13 @@ var Timer = React.createClass({
     return (
       <div>
         <div className="row">
-        <h1 className="text-center">Timer Component</h1>
-      </div>
-      <div className="row">
-        <div className="columns large-3 large-centered">
-          <Clock totalSeconds={0}/>
+            <Clock totalSeconds={0}/>
         </div>
-      </div>
-      <div className="row">
-        <div className="columns large-3 large-centered">
-          <Controls/>
+        <div className="row">
+          <div className="columns large-3 large-centered">
+            <Controls/>
+          </div>
         </div>
-      </div>
       </div>
     )
   }
