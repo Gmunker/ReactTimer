@@ -2,21 +2,29 @@ var React = require('react');
 
 var CountdownForm = React.createClass({
   
-  handleSubmit: function (e) {
+  onSubmit: function (e) {
     e.preventDefault();
-    var time = this.refs.countdownInput.value;
-    alert(time);
+    var strSeconds = this.refs.seconds.value;
+    
+    if (strSeconds.match(/^[0-9]*$/)) {
+      this.refs.seconds.value = '';
+      this.props.onSetCountdown(parseInt(strSeconds, 10));
+    }
   },
+  
   render: function () {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form 
+        ref="form" 
+        onSubmit={this.onSubmit} 
+        className="countdown-form">
           <input  
           className="expand"
             type="text"
             placeholder="Enter time in seconds"
-            ref="countdownInput"/>
-          <button className="text-center expanded hollow button" type="submit">Countdown</button>
+            ref="seconds"/>
+          <button className="expanded hollow button">Countdown</button>
         </form>
       </div>
     )
@@ -24,4 +32,3 @@ var CountdownForm = React.createClass({
 });
 
 module.exports = CountdownForm;
-

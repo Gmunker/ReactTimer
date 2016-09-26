@@ -9,8 +9,8 @@ var Timer = React.createClass({
         <div className="row">
             <Clock totalSeconds={0}/>
         </div>
-        <div className="row">
-          <div className="columns large-3 large-centered">
+        <div>
+          <div>
             <Controls/>
           </div>
         </div>
