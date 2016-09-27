@@ -29,7 +29,11 @@ var Timer = React.createClass({
       timerStatus: newStatus
     });
   },
- startTimer: function() {
+  componentWillUnmount: function() {
+    clearTimeout(this.timer);
+    this.timer = undefined;
+  },
+  startTimer: function() {
     this.timer = setInterval(() => {
       var newCount = this.state.count + 1;
       
