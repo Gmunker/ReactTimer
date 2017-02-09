@@ -1,6 +1,7 @@
 var React = require('react');
 var Clock = require('Clock');
 var Controls = require('Controls');
+var {Link, IndexLink} = require('react-router');
 
 var Timer = React.createClass({
   getInitialState: function() {
@@ -47,7 +48,10 @@ var Timer = React.createClass({
 
     return (
       <div>
-        <h1 className="page-titles">Timer App</h1>
+        <div className="expanded button-group function-buttons">
+          <IndexLink to="/" className="button secondary active-link">Timer</IndexLink>
+          <Link to="/Countdown" className="button secondary active-link hollow">Countdown</Link>
+        </div>
         <Clock totalSeconds={count}/>
         <Controls timerStatus={timerStatus} onStatusChange={this.handleStatusChange}/>
       </div>

@@ -2,6 +2,7 @@ var React = require('react');
 var Clock = require('Clock');
 var CountdownForm = require('CountdownForm');
 var Controls = require('Controls');
+var {IndexLink, Link} = require('react-router');
 
 var Countdown = React.createClass({
     getInitialState: function () {
@@ -65,7 +66,10 @@ var Countdown = React.createClass({
 
       return (
         <div>
-          <h1 className="page-titles">Countdown App</h1>
+          <div className="expanded button-group function-buttons">
+            <IndexLink to="/" className="button secondary active-link hollow">Timer</IndexLink>
+            <Link to="/Countdown" className="button secondary active-link">Countdown</Link>
+          </div>
           <Clock totalSeconds={count}/>
           {renderControlArea()}
         </div>
